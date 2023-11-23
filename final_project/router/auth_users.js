@@ -5,11 +5,6 @@ const regd_users = express.Router();
 
 let users = [];
 
-const isValid = (username) => {
-  //returns boolean
-  //write code to check is the username is valid
-};
-
 const authenticatedUser = (username, password) => {
   const foundUsers = users.filter((user) => {
     return user.username === username && user.password === password;
@@ -83,5 +78,4 @@ regd_users.delete("/auth/review/", (req, res) => {
   }
 });
 module.exports.authenticated = regd_users;
-module.exports.isValid = isValid;
 module.exports.users = users;
